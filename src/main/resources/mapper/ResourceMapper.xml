@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.spring_security_demo.dao.ResourceDao">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.spring_security_demo.entity.Resource">
+        <id column="id" property="id" />
+        <result column="priority" property="priority" />
+        <result column="res_code" property="resCode" />
+        <result column="res_name" property="resName" />
+        <result column="url" property="url" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, priority, res_code AS resCode, res_name AS resName, url
+    </sql>
+
+    <select id="getAll" resultMap="BaseResultMap">
+        select * from sys_resource order by priority;
+    </select>
+
+</mapper>
