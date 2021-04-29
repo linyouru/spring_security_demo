@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //@EnableScheduling //开启对定时任务的支持
 @SpringBootApplication
 public class SpringSecurityDemoApplication {
-
+//test push
     public static void main(String[] args) {
         SpringApplication.run(SpringSecurityDemoApplication.class, args);
         System.out.println("================项目启动完成=================");
